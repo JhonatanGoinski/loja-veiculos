@@ -1,0 +1,2382 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Inicio formatação do site******* */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif; 
+}
+
+html{
+    font-size: 65.5%;
+}
+:root{
+    --cor-principal: #628AA0;
+    --cor-rodape: #5c3392;
+    --cor-branca: #fff;
+    --cor-escura: #451781;
+    --cor-bg-busca: #f2f2f2;
+    --s-valor-bg: #141622;
+}
+/* *******Fim formatação do site */
+
+/* Inicio topo superior site******* */
+.super-topo .super-topo-box{
+    width: 100%;
+    background-color: var(--cor-principal);
+}
+.super-topo .super-topo-box .super-topo-box-corpo{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--cor-branca);
+    padding: 1rem 0;
+    background: var(--cor-escura);
+    clip-path: polygon(8% 0%, 92% 0%, 96% 100%, 5% 100%);
+
+}
+.super-topo-box .super-topo-box-corpo .coluna-1{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    color: var(--cor-branca);
+    margin-left: 13rem;
+}
+.super-topo-box .super-topo-box-corpo .coluna-1 span{
+    font-size: 1.1rem;
+}
+.super-topo-box .super-topo-box-corpo .coluna-1 span i{
+    color: var(--cor-principal);
+    padding-right: 0.5rem;
+    font-size: 1.1rem;
+}
+.super-topo-box .super-topo-box-corpo .coluna-2{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-branca);
+    margin-right: 13rem;
+}
+.super-topo-box .super-topo-box-corpo .coluna-2 a,
+.super-topo-box .super-topo-box-corpo .coluna-2 span,
+.super-topo-box .super-topo-box-corpo .coluna-2 .social i{
+    color: var(--cor-branca);
+    font-size: 1.1rem;
+    transition: 0.4s;
+}
+
+/* Inicio Celular******* */
+@media(max-width:1150px){
+    .super-topo-box .super-topo-box-corpo .coluna-1{
+       margin-left: 8rem;
+    }
+    .super-topo-box .super-topo-box-corpo .coluna-2{
+        margin-right: 8rem;
+     }
+}
+@media(max-width:991px){
+    .super-topo{
+        display: none;
+    }
+}
+/* *******Fim Celular */
+/* *******Fim topo superior */
+
+/* INICIO CABEÇALHO DO SITE E NAVE****  */
+.topo-menu-site{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: sticky;
+    left: 0;
+    top: 0;
+    padding: 0.5rem 9.5%;
+    background: var(--cor-branca);
+    box-shadow: 0 0 5px rgba(190, 190, 190, 0.5), 
+    0 0 10px rgba(190, 190, 190, 0.5);
+    z-index: 111;
+    transition: 0.4s ease;
+}
+
+.topo-menu-site.sticky{
+    padding: 0 9.5%;
+}
+
+.topo-menu-site .logo-site img{
+    width: 280px;
+}
+.topo-menu-site nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+nav .menu-site ul li{
+    padding: 2.5rem 0.5rem;
+}
+nav .menu-site .menu-links{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+}
+nav .menu-site .menu-links li a{
+    position: relative;
+    color: var(--cor-escura);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+nav .menu-anunciar{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+nav .menu-anunciar i{
+    font-size: 1.9rem;
+    color: var(--cor-escura);
+    cursor: pointer;
+}
+nav .menu-anunciar .add-btn{
+    position: relative;
+    background: var(--cor-principal);
+    font-size: 1.6rem;
+    padding: 1.2rem 1.5rem;
+    color: var(--cor-branca);
+    border-radius: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.7s;
+}
+nav .menu-anunciar .add-btn:hover{
+    background: var(--cor-escura);
+    color: var(--cor-branca);
+}
+nav .menu-anunciar .add-btn i,
+nav .menu-anunciar .add-btn i:hover{
+    color: var(--cor-branca);
+    padding-right: 0.5rem;
+
+}
+#menu-btn{
+    font-size: 3.5rem;
+}
+nav .menu-anunciar i:hover{
+    color: var(--cor-principal);
+}
+nav .menu-site ul li a:hover,
+nav .menu-site ul li a.active{
+    color: var(--cor-principal);
+}
+
+/* ****INICIO SUB-MENU DO CABEÇALHO DO SITE E NAVE */
+nav .menu-site ul li .menu-sub{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: absolute;
+    top: 7rem;
+    text-align: justify;
+    width: 180px;
+    background-color: var(--cor-branca);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(190, 190, 190, 0.5);
+    padding: 1rem 0 0;
+    display: none;
+}
+nav .menu-site ul li{
+    transition: 0.4s ease;
+}
+nav .menu-site ul li:hover .menu-sub{
+    display: flex;
+}
+
+nav .menu-site ul li .menu-sub li{
+    border-bottom: 1px solid rgba(190, 190, 190, 0.5);
+    padding: 0.5rem 0.1rem 1rem;
+    z-index: 100;
+    overflow: hidden;
+}
+nav .menu-site ul li .menu-sub li a{
+    font-size: 1.2rem;
+    transition: 0.4s ease;
+}
+nav .menu-site ul li .menu-sub li a:hover{
+    font-size: 1.3rem;
+    padding-left: 0.5rem;
+}
+/* ****FIM SUB-MENUDO CABEÇALHO DO SITE E NAVE */
+
+/* ****INICIO SUB-MENU-DOIS  DO CABEÇALHO DO SITE E NAVE */
+.menu-sub li .menu-sub-dois{
+    position: absolute;
+    left: 182px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -3rem;
+    align-items: left;
+    text-align: justify;
+    padding: 1rem 0 0;
+    background-color: var(--cor-branca);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(190, 190, 190, 0.5);
+    z-index: 111;
+    overflow: hidden;
+    display: none;
+}
+.menu-sub li:hover .menu-sub-dois{
+    display: flex;
+
+}
+.menu-sub li .setaBaixo{
+    position: absolute;
+    left: 150px;
+    top: 5px;
+    color: var(--cor-escura);
+}
+.menu-sub li:hover .setaBaixo{
+    color: var(--cor-principal);
+}
+/* ****FIM SUB-MENU-DOIS DO CABEÇALHO DO SITE E NAVE */
+
+/* INICIO MENU CELULAR - CABEÇALHO DO SITE E NAVE**** */
+@media (max-width:1450px){
+    nav .menu-site ul li{
+        gap: 1rem;
+    }
+    nav .menu-site ul li a{
+        font-size: 1rem;
+    }
+    nav .menu-site .menu-links li a{
+        font-size: 1.1rem;
+        gap: 0.1rem;
+    }
+
+}
+@media (min-width:998px) {
+    #menu-btn{
+        display: none;
+    }
+}
+@media (max-width:1300px){
+    nav .menu-site ul li{
+        padding: 2.1rem 0;
+    }
+}
+@media (max-width:1200px){
+    nav .menu-anunciar .add-btn{
+        display: none;
+    }
+}
+
+@media (max-width:998px){
+    nav .menu-site .menu-links{
+        position: absolute;
+        top: 9rem;
+        left: 0;
+        width: 100%;
+        display: block;
+        background: var(--cor-branca);
+        box-shadow: 0 0 5px rgba(190, 190, 190, 0.5),
+        0 0 10px rgba(190, 190, 190, 0.5);
+        padding-left: 30px;
+        transition: 0.5s ease-in-out;
+        display: none;
+    }
+    nav .menu-site .menu-links.active{
+        display: block;
+    }
+    .topo-menu-site.sticky{
+        padding: 0.6rem 9.5%;
+    }
+    nav .menu-site ul li{
+        padding: 1rem 0;
+    }
+    nav .menu-site ul li .menu-sub{
+        position: static;
+        display: none;
+    }
+    .menu-sub li .menu-sub-dois{
+        position: static;
+        margin-top: 0rem;
+    }
+    nav .menu-anunciar i.cart{
+        display: none;
+    }
+}
+@media (max-width:500px){
+    .topo-menu-site .logo-site img{
+        width: 160px;
+    }
+    nav .menu-site .menu-links{
+       top: 4.6rem; 
+    }
+    nav .menu-site .menu-links{
+        top: 5.5rem;
+    }
+}
+
+/* ****FIM MENU CELULAR - CABEÇALHO DO SITE E NAVE */
+
+/* ****FIM CABEÇALHO DO SITE E NAVE */
+
+/* INICIO SLIDE PRINCIPAL****  */
+.slide-destaque .slider{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 110vh;
+    padding: 0 15rem;
+}
+.slide-destaque .slider .col-1{
+    flex:1 1 20rem;
+}
+.slide-destaque .slider .col-1 h4{
+    font-size: 2.5rem;
+    color: var(--cor-principal);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-bottom: 3rem;
+}
+.slide-destaque .slider .col-1 h1{
+    font-size: 3.2rem;
+    color: var(--cor-branca);
+    text-transform: capitalize;
+    letter-spacing: 3px;
+}
+.slide-destaque .slider .col-1 span{
+    color: var(--cor-principal);
+}
+.slide-destaque .slider .col-1 p{
+    font-size: 1.4rem;
+    color: var(--cor-branca);
+    letter-spacing: 2px;
+    padding-top: 4rem;
+}
+.slide-destaque .slider .col-1 .button{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 4rem;
+}
+.slide-destaque .slider .col-1 .button a{
+    font-size: 1.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    position: relative;
+    padding: 1.8rem 2.8rem 1.8rem 2rem;
+    transition: 0.5s easer;
+    cursor: pointer;
+}
+.slide-destaque .slider .col-1 .button a i{
+    font-size: 2.5rem;
+    position: absolute;
+    top: 33%;
+    right: -1rem;
+    transform: translate(-40%);
+}
+.slide-destaque .slider .col-1 .button a.lojas-btn{
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+}
+.slide-destaque .slider .col-1 .button a.sobre-btn{
+    background-color: var(--cor-branca);
+    color: var(--cor-escura);
+}
+.slide-destaque .slider .col-1 .button a.lojas-btn:hover,
+.slide-destaque .slider .col-1 .button a.sobre-btn:hover{
+    background: var(--cor-escura);
+    color: var(--cor-branca);
+}
+.slide-destaque .slider .col-2{
+    flex: 1 1 40rem;
+    padding-top: 3rem;
+}
+.slide-destaque .slider .col-2 img{
+    width: 80%;
+    height: auto;
+}
+.slide-destaque .swiper [class^="swiper-button-"]{
+    color: var(--cor-branca);
+    background-color: rgba(41, 202, 255, 0.096);
+    padding: 2.5rem;
+    border-radius: 16px;
+}
+.slide-destaque .swiper [class^="swiper-button-"]:hover{
+    color: var(--cor-branca);
+    background-color: rgba(28, 156, 199, 0.4);
+}
+.slide-destaque .swiper [class^="swiper-button-"]::before{
+    font-size: 2rem;
+}
+/* INICIO CELULAR SLIDE**** */
+@media (max-width:1150px){
+    .slide-destaque .slider{
+        display: block;
+        height: auto;
+        padding: 5rem 10rem;
+    }
+    .slide-destaque .slider .col-2 img{
+        width: 90%;
+        height: auto;
+    }
+}
+@media (max-width:600px){
+    .slide-destaque .slider{
+        padding: 5rem 7rem;
+    }
+    .slide-destaque .slider .col-1 h4{
+        font-size: 2rem;
+    }
+    .slide-destaque .slider .col-1 h1{
+        font-size: 3.2rem;
+    }
+    .slide-destaque .slider .col-1 .button a{
+        padding: 1.5rem 2.5rem 1.5rem 2rem;
+        font-size: 1.3rem;
+    }
+    .slide-destaque .slider .col-1 .button a i{
+        font-size: 2rem;
+    }
+    .slide-destaque .slider .col-2 img{
+        width: 90%;
+        height: auto;
+    }
+}
+@media (max-width:500px){
+    .slide-destaque .slider .col-1 h4{
+        font-size: 1.3rem;
+    }
+    .slide-destaque .slider .col-1 h1{
+        font-size: 2.2rem;
+    }
+}
+/* ****FIM CELULAR SLIDE */
+/* ****FIM SLIDE PRINCIPAL  */
+
+/* INICIO BUSCA DO SITE**** */
+.busca-site{
+    position: relative;
+    background: var(--cor-bg-busca);
+    padding: 0 16rem;
+}
+.busca-site .filtro{
+    max-width: 1200px;
+    width: 100%;
+    padding: 2.5rem;
+    position: absolute;
+    top: -7rem;
+    z-index: 111;
+    background: var(--cor-branca);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(190, 190, 190, 0.5),
+    0 0 10px rgba(190, 190, 190, 0.5);
+    overflow: hidden;
+}
+.filtro .filtro-linha{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+.filtro h3{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--cor-escura);
+    letter-spacing: 1px;
+    padding-bottom: 2rem;
+}
+.filtro .filtro-linha h4{
+    font-size: 1.7rem;
+    color: var(--cor-escura);
+    padding-bottom: 1.5rem;
+}
+.filtro .filtro-linha select{
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 200px;
+    height: 45px;
+    border: 1px solid var(--cor-escura);
+    padding: 0 1rem;
+    color: var(--cor-escura);
+    border-radius: 5px;
+}
+.filtro .filtro-linha option{
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--cor-escura);
+}
+.busca-site .busca-site-btn button{
+    font-size: 1.5rem;
+    background: var(--cor-principal);
+    color: var(--cor-branca);
+    padding: 1.3rem 2rem;
+    margin-top: 4rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.busca-site .busca-site-btn button i{
+    padding-right: 0.5rem;
+}
+.busca-site .busca-site-btn button:hover{
+    background-color: var(--cor-escura);
+}
+
+/* INICIO CELULAR BUSCA DO SITE**** */
+
+@media (max-width:1500px){
+    .busca-site .filtro{
+        max-width: 100%;
+    }
+    .busca-site{
+        padding: 0 0;
+    }
+}
+@media (max-width:991px){
+    .filtro .filtro-linha{
+        grid-template-columns: 1fr 1fr 1fr;
+       
+    }
+}
+@media (max-width:768px){
+    .filtro .filtro-linha{
+        grid-template-columns: 1fr 1fr;
+       
+    }
+}
+@media (max-width:600px){
+    .filtro .filtro-linha{
+        gap: 0.5rem;  
+    }
+}
+@media (max-width:450px){
+    .filtro .filtro-linha{
+        grid-template-columns: 1fr;
+
+    }
+    .filtro .filtro-linha select{
+        width: 100%;
+    }
+    .filtro .busca-site-btn button{
+        width: 100%;
+    }
+}
+/* ****FIM CELULAR BUSCA DO SITE */
+/* ****FIM BUSCA DO SITE */
+
+/* INICIO SOBRE NOS**** */
+section{
+    padding: 2.5rem 16rem;
+    background: var(--cor-bg-busca);
+}
+.sobre-nos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    padding-top: 35rem;
+}
+.sobre-nos .col-3{
+    flex: 1 1 20rem;
+    position: relative;
+
+}
+.sobre-nos img.s-img-um{
+    width: 90%;
+    height: 45rem;
+}
+.sobre-nos .col-3 .s-valor{
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    padding: 1rem;
+    background-color: var(--s-valor-bg);
+    border-radius: 20px;
+}
+.sobre-nos .col-3 .s-valor span{
+    color: var(--cor-branca);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.sobre-nos .col-3 .s-valor img.s-img-dois{
+    width: 100px;
+}
+.sobre-nos .col-4{
+    flex: 1 1 20rem;
+}
+.sobre-nos .col-4 h4{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--cor-principal);
+    letter-spacing: 1px;
+}
+.sobre-nos .col-4 h4 i{
+    padding-right: 0.5rem;
+}
+.sobre-nos .col-4 h3{
+    font-size: 4rem;
+    text-transform: capitalize;
+    color: var(--cor-escura);
+    padding-bottom: 2rem;
+}
+.sobre-nos .col-4 h3 span{
+    color: var(--cor-principal);
+}
+.sobre-nos .col-4 p.text{
+    font-size: 1.4rem;
+    color: var(--cor-escura);
+    padding-bottom: 1rem;
+}
+.sobre-nos .col-4 .p1{
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+.sobre-nos .col-4 .p1 i{
+    font-size: 1.6rem;
+    color: var(--cor-principal);
+    padding-right: 0.6rem;
+}
+.sobre-nos .col-4 a{
+    font-size: 1.6rem;
+    color: var(--cor-branca);
+    background-color: var(--cor-principal);
+    position: relative;
+    margin-top: 2.5rem;
+    padding: 1.5rem 3.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s ease; 
+}
+.sobre-nos .col-4 a:hover{
+    background-color: var(--cor-escura);
+    color: var(--cor-branca);
+}
+.sobre-nos .col-4 a i{
+    font-size: 2rem;
+    position: absolute;
+    top: 18px;
+
+}
+/* ****INICIO CELULAR SOBRE NOS */
+@media (max-width:1300px){
+    .sobre-nos .col-3 img.s-img-um{
+        margin-top: 130px;
+        height: auto;
+    }
+    .sobre-nos .col-4 h3{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width:1100px){
+    .sobre-nos .col-3 img.s-img-um{
+        margin-top: 130px;
+        height: auto;
+    }
+}
+@media (max-width:991px){
+    .sobre-nos{
+        padding-top: 40rem;
+    }
+    section{
+        padding: 2.5rem 10rem;
+    }
+    .sobre-nos .col-3 img.s-img-um{
+        margin-top: 130px;
+        height: auto;
+    }
+    .sobre-nos .col-4 h3{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width:768px){
+    .sobre-nos{
+        padding-top: 50rem;
+    }
+    .sobre-nos .col-3 img.s-img-um{
+        margin-top: 130px;
+        height: auto;
+    }
+}
+@media (max-width:600px){
+    section{
+        padding: 2.5rem 7rem;
+    }
+    .sobre-nos .col-3 img.s-img-um{
+        margin-top: 130px;
+        height: auto;
+    }
+    .sobre-nos .col-4 h3{
+        font-size: 2.9rem;
+    }
+    .sobre-nos .col-3 .s-valor img.s-img-dois{
+        width: 80px;
+    }
+    .sobre-nos .col-3 .s-valor span{
+        color: var(--cor-branca);
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+}
+@media (max-width:450px){
+    .sobre-nos{
+        padding-top: 80rem;
+    }
+    .sobre-nos .col-3 img.s-img-um{
+        margin-top: 130px;
+        height: auto;
+    }
+    .sobre-nos .col-4 h3{
+        font-size: 2.4rem;
+    }
+}
+/* ****FIM CELULAR SOBRE NOS */
+
+/* ****FIM SOBRE NOS */
+
+/* INICIO CONTADOR SITE****  */
+.contador{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    min-height: 50vh;
+    background: url("../img/bg-contador.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+.contador .contador-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.contador .contador-box img{
+    width: 70px;
+    height: 70px;
+    background: var(--cor-branca);
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+.contador .contador-box span.numero{
+    color: var(--cor-branca);
+    font-size: 3.2rem;
+    font-weight: 500;
+    padding: 1rem 0;
+}
+.contador .contador-box span.text{
+    color: var(--cor-branca);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.contador .contador-box span.text i{
+    padding-right: 0.5rem;
+}
+/* INICIO CELULAR CONTADOR SITE****  */
+@media (max-width:1288px) {
+    .contador{
+        padding: 2rem 10rem;
+    }
+}
+@media (max-width:991px) {
+    .contador{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:768px) {
+    .contador{
+        padding: 2rem 3rem;
+    }
+}
+/* ****FIM CELULAR CONTADOR SITE  */
+/* ****FIM CONTADOR SITE  */
+
+/* INICIO VEICULOS RECENTES DO SITE**** */
+.carros-recentes{
+    text-align: center;
+    padding-top: 7rem;
+}
+section h4{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--cor-principal);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+section h4 i{
+    padding-right: 0.5rem;
+}
+section h1{
+    position: relative;
+    margin-bottom: 6rem;
+    color: var(--cor-escura);
+    font-size: 4.7rem;
+    letter-spacing: 1px;
+    padding-bottom: 4rem;
+    text-transform: capitalize;
+}
+section h1 span{
+    color: var(--cor-principal);
+}
+
+section h1::before{
+    content: '';
+    width: 100px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    background-color: var(--cor-branca);
+    border: 4px solid var(--cor-principal);
+    border-radius: 10px;
+    transform: translate(-50%);
+}
+section h1::after{
+    content: '';
+    width: 20px;
+    height: 10px;
+    position: absolute;
+    left: 48%;
+    bottom: 1.1rem;
+    border-radius: 40px;
+    background-color: var(--cor-escura);
+}
+.carros-recentes .cr-linha{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+.cr-linha .cr-col{
+    padding: 1rem;
+    box-shadow: 0 0 5px var(--cor-escura);
+    background-color: var(--cor-branca);
+    border-radius: 5px;
+    text-align: justify;
+}
+.cr-linha .cr-col .img-cr{
+    width: 100%;
+    height: 15rem;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 05s ease;
+}
+.cr-linha .cr-col .img-cr img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.cr-linha .cr-col .img-cr:hover img{
+    transform: scale(1.3);
+}
+.cr-linha .cr-col h5{
+    font-size: 1.8rem;
+    color: var(--cor-escura);
+    padding: 1rem 0;
+}
+.cr-linha .cr-col .classificacao{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-bottom: 0.5rem;
+}
+.cr-col .cl-estrelas i{
+    font-size: 1.4rem;
+    color: var(--cor-principal);
+}
+.cr-col .cl-ct-estrelas span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cor-escura);
+}
+.cr-col .cr-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.cr-col .cr-info span{
+    font-size: 1.1rem;
+    color: var(--cor-escura);
+}
+.cr-col .cr-info i{
+    padding-right: 1.3rem;
+    color: var(--cor-escura);
+    font-size: 1.2rem;
+}
+.cr-col .cr-valor{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cr-col .cr-valor p{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--cor-principal);
+}
+.cr-col .cr-valor a{
+    background-color: var(--cor-principal);
+    padding: 0.8rem 2.8rem;
+    border-radius: 0.5rem;
+    color: var(--cor-branca);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.cr-col .cr-valor a:hover{
+    background-color: var(--cor-escura);
+}
+.carros-recentes a.cr-link{
+    font-size: 1.4rem;
+    font-weight: 600;
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    margin-top: 4rem;
+    padding: 1.4rem 3.5rem;
+    border-radius: 12px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.carros-recentes a.cr-link:hover{
+    background-color: var(--cor-escura);
+}
+.carros-recentes a.cr-link i{
+    padding-left: 0.5rem;
+}
+/* INICIO CELULAR VEICULOS RECENTES DO SITE**** */
+@media (max-width:1350px){
+    .carros-recentes .cr-linha{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:800px){
+    .carros-recentes .cr-linha{
+        grid-template-columns: 1fr;
+    }
+    .cr-linha .cr-col .img-cr{
+        height: auto;
+    }
+    section h1{
+        font-size: 2.8rem;
+    }
+}
+@media (max-width:450px){
+    section h1{
+        font-size: 2rem;
+    }
+}
+/* ****FIM CELULAR VEICULOS RECENTES DO SITE */
+/* ****FIM VEICULOS RECENTES DO SITE */
+
+/* INICIO DEPARTAMENTO CATEGORIA VEÍCULOS DO SITE****  */
+.departamento{
+    background-color: var(--cor-branca);
+    text-align: center;
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+}
+.departamento .dep-linha{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+}
+.dep-linha .dep-col{
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--cor-bg-busca);
+    border-radius: 12px;
+    box-shadow: 0 0 5px var(--cor-escura);
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+.dep-linha .dep-col:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 5px var(--cor-principal);
+}
+.dep-linha .dep-col img{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    object-fit: cover;
+}
+.dep-linha .dep-col h5{
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--cor-escura);
+}
+.dep-linha .dep-col:hover h5{
+    color: var(--cor-principal);
+}
+/* INICIO CELULAR DEPARTAMENTO CATEGORIA VEÍCULOS DO SITE****  */
+@media (max-width:1350px) {
+    .departamento .dep-linha{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media (max-width:900px) {
+    .departamento .dep-linha{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (max-width:600px) {
+    .departamento .dep-linha{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:450px) {
+    .departamento .dep-linha{
+        grid-template-columns: 1fr;
+    }
+    .dep-linha .dep-col img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+/* ****FIM CELULAR DEPARTAMENTO CATEGORIA VEÍCULOS DO SITE  */
+/* ****FIM DEPARTAMENTO CATEGORIA VEÍCULOS DO SITE  */
+
+/* INICIO PLAY CTA SITE**** */
+.play{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 80vh;
+    background: url(../img/jgcta/bg-cta-ms.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.play .play-btn{
+    position: relative;
+    background-color: var(--cor-branca);
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    font-size: 6rem;
+    line-height: 100px;
+    color: var(--cor-principal);
+}
+.play .play-btn::before,
+.play .play-btn::after{
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border: 6px solid rgba(28, 156, 199, 0.219);
+    border-radius: 50%;
+    animation: animar 1.5s linear infinite;
+    opacity: 1;
+}
+@keyframes animar{
+    0%{
+        transform: scale(0.5);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+
+.play .play-btn::after{
+    animation-delay: 0.2s;
+}
+/* ****FIM PLAY CTA SITE */
+
+/* INICIO DESTAQUE REVENDAS DO SITE**** */
+.revendas{
+    background-color: var(--cor-branca);
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+.revendas .revenda-linha{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2.5rem; 
+}
+.revenda-linha .revenda-col{
+    position: relative;
+    width: 100%;
+    text-align: justify;
+    background-color: var(--cor-branca);
+    box-shadow: 0 0 5px var(--cor-escura);
+    padding: 1rem;
+    border-radius: 12px;
+    transition: 0.5s ease;
+}
+.revenda-linha .revenda-col:hover{
+    transform: translateY(-10px);
+}
+.revenda-linha .revenda-col .revenda-img{
+    background-color: var(--cor-bg-busca);
+    border-radius: 12px;
+}
+.revenda-linha .revenda-col .revenda-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+.revenda-linha .revenda-col .revenda-total-veiculos{
+    background-color: var(--cor-principal);
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1.3rem;
+    color: var(--cor-branca);
+    border-radius: 40px;
+    padding: 0.7rem 1.4rem;
+}
+.revenda-linha .revenda-col h5{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+}
+.revenda-linha .revenda-col p{
+    font-size: 1.3rem;
+    color: var(--cor-escura);
+    padding-bottom: 1rem;
+}
+.revenda-linha .revenda-col i{
+    color: var(--cor-principal);
+    padding-right: 0.5rem;
+}
+/* INICIO CELULAR DESTAQUE REVENDAS DO SITE**** */
+@media (max-width:1250px) {
+    .revendas .revenda-linha{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .revenda-linha .revenda-col .revenda-img img{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width:1000px) {
+    .revendas .revenda-linha{
+        grid-template-columns: 1fr 1fr;
+    }
+    .revenda-linha .revenda-col .revenda-img img{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width:500px) {
+    .revendas .revenda-linha{
+        grid-template-columns: 1fr;
+    }
+    .revenda-linha .revenda-col .revenda-img img{
+        width: 100%;
+        height: auto;
+    }
+}
+/* ****FIM CELUALR DESTAQUE REVENDAS DO SITE */
+/* ****FIM DESTAQUE REVENDAS DO SITE */
+
+/* INICIO  GERAÇÃO DE VALOR DO SITE DE VEICULOS**** */
+.gerar-valor{
+    width: 100%;
+    background-color: var(--cor-escura);
+}
+.gerar-valor .g-v-linha{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 4rem 0;
+}
+.gerar-valor .g-v-linha .col-1{
+    display: flex;
+    flex: 1 1 10rem;
+    flex-direction: column;
+    gap: 2rem;
+}
+.gerar-valor .g-v-linha .col-1.centro{
+    padding-top: 6rem;
+}
+.gerar-valor .g-v-linha .col-2{
+    flex: 1 1 30rem;
+}
+.gerar-valor .g-v-linha .col-2 img{
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+}
+.gerar-valor .g-v-linha .col-2 img:hover{
+    transform: translateY(-20px);
+}
+.g-v-linha .col-1 .g-v-um{
+    background-color: var(--cor-branca);
+    border-radius: 12px;
+    padding: 1.3rem;
+}
+.col-1 .g-v-um .g-v-numero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+.col-1 .g-v-um .g-v-numero img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.col-1 .g-v-um .g-v-numero h2{
+    font-size: 6rem;
+    color: var(--cor-principal);
+}
+.col-1 .g-v-um h5{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--cor-escura);
+    padding-bottom: 1rem;
+}
+.col-1 .g-v-um p{
+    font-size: 1.3rem;
+    color: var(--cor-escura);
+}
+.g-v-linha .col-2 h4{
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 2;
+    color: var(--cor-branca);
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+}
+.g-v-linha .col-2 h4 i{
+    padding-right: 0.5rem;
+}
+.g-v-linha .col-2 h3{
+    font-size: 3.5rem;
+    color: var(--cor-branca);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding-bottom: 4rem;  
+}
+.g-v-linha .col-2 h3 span{
+    color: var(--cor-principal);
+}
+.g-v-linha .col-2 p{
+    font-size: 1.3rem;
+    color: var(--cor-branca);
+    padding-bottom: 3rem;
+}
+/* INICIO CELULAR GERAÇÃO DE VALOR DO SITE DE VEICULOS**** */
+@media (max-width:770px) {
+    .g-v-linha .col-2 h3{
+        font-size: 2.4rem;
+    }
+}
+@media (max-width:550px) {
+    .g-v-linha .col-2 h3{
+        font-size: 2.4rem;
+    }
+    .gerar-valor .g-v-linha .col-2 img{
+        height: auto;
+    }
+}
+@media (max-width:450px) {
+    .g-v-linha .col-2 h3{
+        font-size: 2.4rem;
+    }
+    .gerar-valor .g-v-linha .col-2 img{
+        height: auto;
+    }
+}
+/* ****FIM CELULAR GERAÇÃO DE VALOR DO SITE DE VEICULOS */
+/* ****FIM  GERAÇÃO DE VALOR DO SITE DE VEICULOS */
+
+/* INICIO MARCAS DE VEICULOS**** */
+.marcas{
+    text-align: center;
+    padding-top: 7rem;
+}
+.marcas .marca-linha{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+}
+.marca-linha .marca-col{
+    position: relative;
+    padding: 1rem;
+    background-color: var(--cor-branca);
+    border-radius: 12px;
+    box-shadow: 0 0 5px var(--cor-escura);
+    transition: 0.5s ease;
+}
+.marca-linha .marca-col:hover{
+    transform: translateY(-20px);
+}
+.marca-linha .marca-col img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.marca-linha .marca-col h5{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--cor-escura);
+}
+
+@media (max-width:770px) {
+    .g-v-linha .col-2 h3{
+        font-size: 2.4rem;
+    }
+}
+/* INICIO CELULAR MARCAS DE VEICULOS**** */
+@media (max-width:1300px) {
+    .marcas .marca-linha{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .marcas .marca-linha img{
+        width: 60%;
+        height: auto;
+    }
+}
+@media (max-width:780px) {
+    .marcas .marca-linha{
+        grid-template-columns: 1fr 1fr;
+    }
+    .marcas .marca-linha img{
+        height: auto;
+    }
+    .marcas h1{
+        font-size: 2.8rem;
+    }
+}
+@media (max-width:500px) {
+    .marcas .marca-linha{
+        grid-template-columns: 1fr;
+    }
+    .marcas .marca-linha img{
+        height: auto;
+    }
+    .marcas h1{
+        font-size: 2.4rem;
+    }
+}
+
+/* ****FIM CELULAR MARCAS DE VEICULOS */
+/* ****FIM MARCAS DE VEICULOS */
+
+/* INICIO DEPOIMENTOS SITE DE VEICULOS**** */
+.depoimentos{
+    text-align: center;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+}
+.depoimentos .slide{
+    background-color: var(--cor-branca);
+    box-shadow: 0 0 2px var(--cor-escura);
+    padding: 1rem;
+}
+.depoimentos .slide img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: top;
+    background-color: var(--cor-principal);
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+.depoimentos .slide h5{
+    font-size: 1.8rem;
+    color: var(--cor-escura);
+    padding: 0.5rem;
+}
+.depoimentos .slide span{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--cor-principal);
+}
+.depoimentos .slide p{
+    font-size: 1.3rem;
+    color: var(--cor-escura);
+}
+.depoimentos .slide i{
+    color: var(--cor-principal);
+    font-size: 1.2rem;
+}
+/* ****FIM DEPOIMENTOS SITE DE VEICULOS */
+
+/* INICIO BAIXAR APP CELULAR DO SITE DE VEICULOS**** */
+section h1.baixar-titulo{
+    font-size: 3.5rem;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+}
+section h1.baixar-titulo::before{
+    border: none;
+    background: transparent;
+}
+section h1.baixar-titulo::after{
+    border: none;
+    background: transparent;
+}
+.baixar-app{
+    background-color: var(--cor-branca);
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.baixar-app .baixar-linha{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--cor-bg-busca);
+    border-radius: 10px;
+    padding: 2rem;
+    overflow: hidden;
+}
+.baixar-app  .baixar-linha .baixar-col{
+    flex: 1 1 20rem;
+}
+.baixar-linha .baixar-col p.texto-baixar{
+    font-size: 1.4rem;
+    color: var(--cor-escura);
+    padding-bottom: 2rem;
+}
+.baixar-linha .baixar-col .baixar-box{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.baixar-linha .baixar-col .baixar-box a{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    border-radius: 30px;
+    padding: 1rem 3rem;  
+}
+.baixar-linha .baixar-col .baixar-box a img{
+    width: 40px;
+    height: 40px;
+    color: var(--cor-branca);
+}
+.baixar-linha .baixar-col .baixar-box a span{
+    font-size: 1.3rem;
+    color: var(--cor-branca);
+}
+.baixar-linha .baixar-col .baixar-box a p{
+    font-size: 1.5rem;
+    color: var(--cor-branca);
+}
+
+.baixar-linha .baixar-col .baixar-box a.google{
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    transition: 0.4s;
+}
+.baixar-linha .baixar-col .baixar-box a.google:hover{
+    background-color: var(--cor-escura);
+}
+
+.baixar-linha .baixar-col .baixar-box a.apple{
+    background-color: var(--cor-escura);
+    color: var(--cor-branca);
+    transition: 0.4s;
+}
+.baixar-linha .baixar-col .baixar-box a.apple:hover{
+    background-color: var(--cor-principal);
+}
+
+.baixar-linha .baixar-col img.baixar-fone{
+    position: absolute;
+    top: 0.5rem;
+    width: 400px;
+    height: auto;
+    transition: 0.5s ease;
+}
+.baixar-linha .baixar-col img.baixar-fone:hover{
+    transform: rotate(4deg);
+}
+/* INICIO  CELULAR BAIXAR APP CELULAR DO SITE DE VEICULOS**** */
+@media (max-width:1200px) {
+    .baixar-app .baixar-linha{
+        flex-direction: column;
+    }
+    .baixar-linha .baixar-col img.baixar-fone{
+        position: inherit;
+        height: auto;
+        margin-top: 2rem;
+    }
+}
+@media (max-width:850px) {
+    .baixar-linha .baixar-col .baixar-box{
+        flex-direction: column;
+    }
+    .baixar-linha .baixar-col img.baixar-fone{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width:500px) {
+    section h1.baixar-titulo{
+        font-size: 2.4rem;
+    }
+    .baixar-linha .baixar-col .baixar-box a span{
+        font-size: 1.4rem;
+        color: var(--cor-branca);
+    }
+    .baixar-linha .baixar-col .baixar-box a p{
+        font-size: 1.1rem;
+        color: var(--cor-branca);
+    }
+    .baixar-linha .baixar-col .baixar-box a img{
+        width: 35px;
+        height: auto;
+        color: var(--cor-branca);
+    }
+}
+@media (max-width:420px) {
+    .baixar-linha .baixar-col .baixar-box a span{
+        font-size: 1.2rem;
+    }
+    .baixar-linha .baixar-col .baixar-box a p{
+        font-size: 1rem;
+    }
+    .baixar-linha .baixar-col .baixar-box a img{
+        width: 30px;
+        height: auto;
+    }
+}
+/* ****FIM CELULAR BAIXAR APP CELULAR DO SITE DE VEICULOS */
+/* ****FIM BAIXAR APP CELULAR DO SITE DE VEICULOS */
+
+/* INICIO RODAPE DO SITE DE VEICULOS**** */
+.rodape{
+    background-color: var(--cor-escura);
+}
+.rodape .rodape-linha{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 16rem;
+}
+.rodape-linha .rodape-col img{
+    width: 200px;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background-color: var(--cor-branca);
+}
+.rodape-linha .rodape-col p{
+    font-size: 1.3rem;
+    color: var(--cor-branca);
+    padding-bottom: 2.5rem;
+}
+.rodape-linha .rodape-col span{
+    display: block;
+    color: var(--cor-branca);
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.rodape-linha .rodape-col span i{
+    font-size: 15px;
+    background-color: var(--cor-principal);
+    padding: 0.5rem;
+    margin-right: 5px;
+    border-radius: 10px;
+}
+.rodape-linha .rodape-col h5{
+    font-size: 1.9rem;
+    position: relative;
+    color: var(--cor-branca);
+    letter-spacing: 1px;
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+.rodape-linha .rodape-col h5::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--cor-branca);
+}
+.rodape-linha .rodape-col h5::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    width: 20px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--cor-principal);
+}
+.rodape-linha .rodape-col a{
+    display: block;
+    font-size: 1.6rem;
+    color: var(--cor-branca);
+    padding-top: 1rem;
+    transition: 0.4s ease;
+}
+.rodape-linha .rodape-col a:hover{
+    color: var(--cor-principal);
+    padding-left: 5px;
+}
+.rodape-linha .rodape-col input{
+    width: 100%;
+    height: 40px;
+    font-size: 1.4rem;
+    color: var(--cor-escura);
+    padding-left: 10px;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+}
+.rodape-linha .rodape-col button{
+    width: 100%;
+    background-color: var(--cor-principal);
+    font-size: 1.6rem;
+    border-radius: 5px;
+    color: var(--cor-branca);
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.rodape-linha .rodape-col button:hover{
+    background-color: var(--cor-escura);
+    border: 1px solid var(--cor-branca);
+}
+.rodape .rodape-direitos{
+    background-color: var(--cor-rodape);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 2rem 16rem;
+}
+.rodape .rodape-direitos p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-branca);
+    letter-spacing: 1px;
+}
+.rodape .rodape-direitos p span{
+    color: var(--cor-principal);
+}
+.rodape .rodape-direitos .rodape-redes{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 1.3rem 15rem;
+    background-color: var(--cor-principal);
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 5% 100%);
+}
+.rodape .rodape-direitos .rodape-redes i{
+    font-size: 1.6rem;
+    color: var(--cor-principal);
+    background-color: var(--cor-branca);
+    margin-left: 20px;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.4s ease;
+}
+.rodape .rodape-direitos .rodape-redes i:hover{
+    transform: scale(1.1);
+}
+/* INCIO CELUAR RODAPE DO SITE DE VEICULOS**** */
+@media (max-width:1400px) {
+    .rodape .rodape-direitos .rodape-redes{
+        padding: 1.3rem 5rem;
+    } 
+}
+@media (max-width:1150px) {
+    .rodape .rodape-direitos .rodape-redes{
+        position: inherit;
+        background: none;
+        padding: 1.3rem 0;
+    }
+    .rodape .rodape-direitos{
+        flex-direction: column;
+    }
+    .rodape .rodape-linha{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+@media (max-width:991px) {
+    .rodape .rodape-direitos{
+        padding: 2rem 10rem;
+    }
+    .rodape .rodape-linha{
+        padding: 2rem 10rem;
+        grid-template-columns: 1fr 1fr;
+    }
+    .rodape-linha .rodape-col a{
+        font-size: 1.3rem;
+    }
+}
+@media (max-width:768px) {
+    .rodape .rodape-direitos{
+        padding: 2rem 10rem;
+    }
+    .rodape .rodape-linha{
+        grid-template-columns: 1fr 1fr;
+    }
+    .rodape-linha .rodape-col a{
+        font-size: 1.3rem;
+    }
+}
+@media (max-width:600px) {
+    .rodape .rodape-linha{
+        grid-template-columns: 1fr;
+        padding: 2rem 7rem;
+    }
+    .rodape .rodape-direitos{
+        padding: 2rem 7rem;
+    }
+}
+/* ****FIM CELUAR RODAPE DO SITE DE VEICULOS */
+/* ****FIM RODAPE DO SITE DE VEICULOS */
+
+
+
+
+/* INICIO TOPO CATEGORIAS VEICULOS DO SITE DE VEICULOS**** */
+.categorias-veiculos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 50vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/jgcta/bg-cta-ms.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.categorias-veiculos h2{
+    font-size: 3.5rem;
+    color: var(--cor-branca);
+}
+.categorias-veiculos .links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--cor-branca);
+    padding-top: 2rem;
+}
+.categorias-veiculos .links a{
+    font-size: 1.5rem;
+    color: var(--cor-branca);
+}
+.categorias-veiculos .links a:hover{
+    color: var(--cor-principal);
+}
+.categorias-veiculos .links span,
+.categorias-veiculos .links p{
+    font-size: 1.5rem;
+    color: var(--cor-branca);
+}
+/* ****FIM TOPO CATEGORIAS VEICULOS DO SITE DE VEICULOS */
+
+/* INICIO FILTRO E VEICULOS DA CATEGORIAS DE VEICULOS DO SITE DE VEICULOS**** */
+.carros-recentes .cr-linha.linha{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 1.5rem;
+}
+.carros-recentes .cr-linha.linha .cr-col .img-cr{
+    width: 100%;
+    height: 15rem;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 05s ease;
+}
+.carros-recentes .cr-linha.linha .cr-col .img-cr img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.carros-recentes.cats{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.carros-recentes.cats .col-1{
+    flex: 1 1 2rem;
+    width: 200px;
+    text-align: justify;
+}
+.carros-recentes.cats .col-2{
+    flex: 1 1 60rem;
+}
+.carros-recentes.cats .cr-col .img-cr{
+    height: auto;
+}
+.carros-recentes.cats .col-1 h5{
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    padding-top: 0.5rem;
+}
+.carros-recentes.cats .col-1 h5::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 3px;
+    background-color: var(--cor-principal);
+    border-radius: 3px;
+}
+.carros-recentes.cats .col-1 .filtro-busca{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 1rem;
+}
+.carros-recentes.cats .col-1 .filtro-busca .filtro-cat{
+    width: 100%;
+    height: 100%;
+    padding: 18px;
+    font-size: 1.4rem;
+    border: 1px solid var(--cor-escura);
+    border-radius: 5px;
+}
+.carros-recentes.cats .col-1 .filtro-busca i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.8rem;
+    color: var(--cor-principal);
+}
+.carros-recentes.cats .col-1 .caixa-busca{
+    font-size: 1.4rem;
+    color: var(--cor-escura);
+}
+.carros-recentes.cats .col-1 input{
+    margin-right: 0.5rem;
+    accent-color: var(--cor-principal);
+    margin-bottom: 1.5rem;
+}
+.carros-recentes.cats .col-1 .cat-col{
+    background-color: var(--cor-branca);
+    margin-bottom: 1rem;
+    padding: 2rem 1.5rem;
+    text-align: justify;
+    box-shadow: 0 0 2px var(--cor-escura);
+    border-radius: 5px;
+}
+.carros-recentes.cats .col-2 .cat-veiculos-top{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    background-color: var(--cor-branca);
+    margin-bottom: 2rem;
+    box-shadow: 0 0 2px var(--cor-escura);
+    border-radius: 5px;
+}
+.carros-recentes.cats .col-2 .cat-veiculos-top span{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--cor-escura);
+
+}
+.carros-recentes.cats .col-2 .cat-veiculos-top i{
+    font-size: 2rem;
+    margin-right: 0.3rem;
+    color: var(--cor-escura); 
+}
+.carros-recentes.cats .col-2 .cat-veiculos-top i.grade{
+    color: var(--cor-principal);
+    padding: 5px;
+    border: 1px solid var(--cor-principal);
+    cursor: pointer;
+}
+.carros-recentes.cats .col-2 .cat-veiculos-top select{
+    font-size: 1.3rem;
+    color: var(--cor-escura);
+    padding: 1rem 2rem;
+    border: 1px solid var(--cor-principal);
+    border-radius: 5px;
+}
+.carros-recentes.cats .col-2 .cat-veiculos-top option{
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+}
+.carros-recentes.cats .col-2 .paginacao{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+}
+.carros-recentes.cats .col-2 .paginacao span{
+    font-size: 1.5rem;
+    color: var(--cor-branca);
+    background-color: var(--cor-principal);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.carros-recentes.cats .col-2 .paginacao span.p-numero{
+    background-color: var(--cor-escura);
+    transition: 0.4s ease;
+}
+.carros-recentes.cats .col-2 .paginacao span.p-numero:hover{
+    background-color: var(--cor-principal);
+}
+/* INICIO CELULAR FILTRO E VEICULOS DA CATEGORIAS DE VEICULOS DO SITE DE VEICULOS**** */
+@media (max-width:1300px) {
+    section{
+        padding: 2rem 13rem;
+    }
+}
+@media (max-width:1000px) {
+    .carros-recentes .cr-linha.linha{
+        grid-template-columns: 1fr 1fr;
+    }
+    .carros-recentes.cats .cr-col .img-cr{
+        height: auto;
+    }
+}
+@media (max-width:680px) {
+    .carros-recentes .cr-linha.linha{
+        grid-template-columns: 1fr;
+    }
+    .carros-recentes .col-1{
+        flex: 1 1 2rem;
+        width: 100%;
+    }
+}
+@media (max-width:500px) {
+    section{
+        padding: 2.5rem 3rem;
+    }
+}
+@media (max-width:350px) {
+    section{
+        padding: 0.5rem 1rem;
+    }
+}
+/* ****FIM CELULAR FILTRO E VEICULOS DA CATEGORIAS DE VEICULOS DO SITE DE VEICULOS */
+/* ****FIM FILTRO E VEICULOS DA CATEGORIAS DE VEICULOS DO SITE DE VEICULOS */
+
+/* INICIO LISTAGEM DE VEICULOS DA CATEGORIAS DE VEICULOS DO SITE DE VEICULOS**** */
+.carros-recentes .cr-linha.linha.listagem-carros{
+    display: block;
+}
+.carros-recentes .cr-linha.linha.listagem-carros .cr-col{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+.carros-recentes .cr-linha.linha.listagem-carros .cr-col .img-cr{
+    flex: 1 1 10rem;
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+}
+.carros-recentes .cr-linha.linha.listagem-carros .cr-col .img-cr img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.carros-recentes .cr-linha.linha.listagem-carros .cr-col .listaJ{
+    flex: 1 1 30rem;
+}
+.carros-recentes .cr-linha.linha.listagem-carros .cr-col .listaJ .cr-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+.carros-recentes .cr-linha.linha.listagem-carros .cr-col .listaJ .texto{
+    font-size: 1.3rem;
+    color: var(--cor-escura);
+    padding-bottom: 1.5rem; 
+}
+/* INICIO CELULAR LISTAGEM DE VEICULOS DA CATEGORIAS DE VEICULOS DO SITE DE VEICULOS */
+@media (max-width:850px) {
+    .carros-recentes .cr-linha.linha.listagem-carros .cr-col{
+        flex-wrap: wrap;
+    }
+    .carros-recentes .cr-linha.linha.listagem-carros .cr-col .img-cr{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width:550px) {
+    .carros-recentes .cr-linha.linha.listagem-carros .cr-col .listaJ .cr-info{
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
+/* ****FIM CELULAR LISTAGEM DE VEICULOS DA CATEGORIAS DE VEICULOS DO SITE DE VEICULOS */
+/* ****FIM LISTAGEM DE VEICULOS DA CATEGORIAS DE VEICULOS DO SITE DE VEICULOS */
+
+/* INICIO ANUNCIO DE VEICULOS DO SITE DE VEICULOS**** */
+.slider{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 3rem;
+    background-color: var(--cor-bg-busca);
+}
+.slider .slide-um{
+    flex: 1 1 50rem;
+}
+.slider .anuncio-barra-lateral{
+    flex: 1 1 5rem;
+}
+.slider .slide-um .col-1{
+    background-color: var(--cor-branca);
+    padding: 2rem 1.5rem;
+    box-shadow: 0 0 3px var(--cor-escura);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+.slider .slide-um h6{
+    font-size: 1.4rem;
+    color: var(--cor-branca);
+    background-color: var(--cor-principal);
+    padding: 0.2rem 1rem;
+    width: 115px;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+.slider .slide-um h6:hover{
+    background-color: var(--cor-escura);
+}
+.slider .slide-um h5{
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+    text-transform: capitalize;
+}
+.slider .slide-um .data{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+}
+.slider .slide-um .data span{
+    font-size: 1.3rem;
+    color: var(--cor-escura);
+}
+.slider .slide-um .data i{
+    font-size: 1.5rem;
+    color: var(--cor-principal);
+    padding-right: 0.5rem;
+    padding-bottom: 3rem;
+}
+.slider .swiper{
+    width: 100%;
+    height: 100%;
+}
+.slider .swiper .swiper-wrapper{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    text-align: center;
+}
+.slider .swiper .swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--cor-escura);
+}
+.slider .swiper{
+    width: 100%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.slider .swiper .swiper-slide{
+    background-size: cover;
+    background-position: center;
+}
+.slider .anuncio-slide-2{
+    width: 100%;
+    height: 60%;
+}
+.slider .anuncio-slide{
+    height: 20%;
+    padding: 10px 0;
+    box-sizing: border-box;
+}  
+.slider .anuncio-slide-2 .swiper-slide{
+    width: 20%;
+    height: 15rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    opacity: 1;
+}
+.slider .slide-um .col-1 .anuncio-linha{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+.slide-um .col-1 .anuncio-linha .anuncio-box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.slide-um .col-1 .anuncio-linha .anuncio-box i{
+    font-size: 1.9rem;
+    color: var(--cor-principal);
+}
+.slide-um .col-1 .anuncio-linha .anuncio-box span{
+    font-size: 1.2rem;
+    color: var(--cor-escura);
+}
+.slide-um .col-1 .anuncio-linha .anuncio-box p{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--cor-escura);
+}
+.slide-um .col-1 p.dec{
+    font-size: 1.4rem;
+    color: var(--cor-escura);
+    padding-bottom: 1rem;
+}
+.slide-um .col-1 .anuncios-acessorios{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+}
+.slide-um .col-1 .anuncios-acessorios p.ac{
+    font-size: 1.3rem;
+    color: var(--cor-escura);
+}
+.slide-um .col-1 .anuncios-acessorios p.ac i{
+    color: var(--cor-principal);
+    padding-right: 0.5rem;
+}
+
+.slide-um .col-1 .anuncios-historico p.ac{
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+    color: var(--cor-escura);
+}
+.slide-um .col-1 .anuncios-historico p.ac i{
+    color: var(--cor-principal);
+    padding-right: 0.5rem;
+}
+
+
+.anuncio-barra-lateral .col-2{
+    background-color: var(--cor-branca);
+    padding: 2rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 3px var(--cor-escura);
+}
+.anuncio-barra-lateral .col-2 h3{
+    font-size: 2rem;
+    color: var(--cor-escura);
+    padding-bottom: 1rem;
+}
+.anuncio-barra-lateral .col-2 .anuncio-bl-localizacacao{
+    display: flex;
+    grid-area: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1.1rem;
+}
+.anuncio-barra-lateral .col-2 .anuncio-bl-localizacacao span{
+    padding-right: 0.5rem;
+    font-size: 1.2rem;
+}
+.anuncio-barra-lateral .col-2 .anuncio-bl-localizacacao i{
+    color: var(--cor-principal);
+    font-size: 1.4rem;
+    padding-right: 0.5rem;
+}
+.anuncio-barra-lateral .col-2 .anuncio-bl-cliente{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.anuncio-barra-lateral .col-2 .anuncio-bl-cliente img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--cor-principal);
+}
+.anuncio-barra-lateral .col-2 .anuncio-bl-cliente h6{
+    font-size: 1.5rem;
+    color: var(--cor-escura);
+}
+.anuncio-barra-lateral .col-2 .anuncio-bl-cliente span{
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.anuncio-barra-lateral .col-2 .anuncio-bl-cliente span a{
+    color: var(--cor-escura);
+}
+.anuncio-barra-lateral .col-2 .anuncio-bl-cliente span a:hover{
+    color: var(--cor-principal);
+}
+.anuncio-barra-lateral .col-2 .anuncio-bl-cliente i{
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: var(--cor-escura);
+    padding-right: 0.5rem;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.anuncio-barra-lateral .col-2 .anuncio-bl-cliente i:hover{
+    transform: translateY(-1.5px);
+    color: var(--cor-principal);
+}
+.anuncio-barra-lateral .col-2 .anuncio-bl-cliente p{
+    margin: 3px 0 3px 0;
+    align-items: center;
+    text-align: center;
+}
+
+.anuncio-barra-lateral .col-2 .anuncio-bl-cliente .button-whats{
+    padding-top: 1rem;
+}
+.anuncio-barra-lateral .col-2 .anuncio-bl-cliente .button-whats a{
+    font-size: 1.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    position: relative;
+    padding: 1rem;
+    transition: 0.5s easer;
+    cursor: pointer;
+}
+
+.anuncio-barra-lateral .col-2 .anuncio-bl-cliente .button-whats a.whats-btn{
+    background-color: #27ae27;
+    color: var(--cor-branca);
+    transition: 0.4s ease;
+}
+.anuncio-barra-lateral .col-2 .anuncio-bl-cliente .button-whats a.whats-btn:hover{
+    background-color: #165516;
+    color: var(--cor-branca);
+}
+.anuncio-barra-lateral .col-2 h6{
+    font-size: 1.6rem;
+    color: var(--cor-escura);
+    padding-bottom: 0.5rem;
+}
+.anuncio-barra-lateral .col-2 input,
+.anuncio-barra-lateral .col-2 textarea{
+    width: 100%;
+    border: 1px solid var(--cor-escura);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+.anuncio-barra-lateral .col-2 button{
+    background-color: var(--cor-principal);
+    font-size: 1.2rem;
+    position: relative;
+    color: var(--cor-branca);
+    padding: 1rem 2.5rem;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.anuncio-barra-lateral .col-2 button:hover{
+    background-color: var(--cor-escura);
+}
+/* INICIO CELULAR ANUNCIO DE VEICULOS DO SITE DE VEICULOS**** */
+@media (max-width:850px) {
+    .slider .swiper{
+        height: auto;
+    }
+    .slider{
+        display: inherit;
+    }
+    .slider .slide-um .col-1 .anuncio-linha{
+        grid-template-columns: 1fr 1fr;
+    }
+    .slider .slide-um .col-1 .anuncios-acessorios{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:500px) {
+    .slider .swiper{
+        height: auto;
+    }
+    .slider{
+        display: inherit;
+    }
+    .slider .slide-um .col-1 .anuncio-linha{
+        grid-template-columns: 1fr;
+    }
+    .slider .slide-um .col-1 .anuncios-acessorios{
+        grid-template-columns: 1fr;
+    }
+}
+/* ****FIM CELULAR ANUNCIO DE VEICULOS DO SITE DE VEICULOS */
+/* ****FIM ANUNCIO DE VEICULOS DO SITE DE VEICULOS */
+
+
+
+
+
+
+
+
+
